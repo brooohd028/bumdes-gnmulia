@@ -4,173 +4,137 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BUMDES Gunung Mulia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #0b132b;
-      color: #fff;
+      background: #0d1b2a;
+      color: white;
     }
-
     header {
+      background: #1b263b;
+      padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 40px;
-      background: rgba(0,0,0,0.7);
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 10;
     }
-
-    .logo img {
-      width: 60px;
-      height: 60px;
-      animation: spin 6s linear infinite;
+    header .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #4caf50;
+      display: flex;
+      align-items: center;
     }
-
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
     nav a {
-      color: #fff;
+      color: white;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 10px;
       font-weight: bold;
     }
-
+    nav a:hover {
+      color: #4caf50;
+    }
     .hero {
       text-align: center;
       padding: 100px 20px;
-      position: relative;
-      z-index: 1;
+      background: linear-gradient(to bottom, #0d1b2a, #1b263b);
     }
-
     .hero h1 {
-      font-size: 2.5rem;
-      color: #00ff99;
+      font-size: 36px;
+      color: #00ffb3;
     }
-
+    .hero span {
+      color: #ffcc00;
+    }
     .hero p {
-      margin: 20px auto;
-      max-width: 600px;
+      margin: 15px 0;
+      font-size: 16px;
       color: #ddd;
     }
-
     .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      margin: 10px;
-      border-radius: 8px;
-      text-decoration: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
       font-weight: bold;
+      border-radius: 8px;
       transition: 0.3s;
     }
-
     .btn-green {
-      background: #00c853;
+      background: #4caf50;
       color: white;
     }
     .btn-green:hover {
-      background: #009624;
+      background: #45a049;
     }
-
     .btn-yellow {
-      border: 2px solid #ffb300;
-      color: #ffb300;
       background: transparent;
+      border: 2px solid #ffcc00;
+      color: #ffcc00;
     }
     .btn-yellow:hover {
-      background: #ffb300;
-      color: black;
+      background: #ffcc00;
+      color: #000;
     }
-
-    /* Canvas bintang */
-    canvas#starfield {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      pointer-events: none;
-    }
-
-    /* Galeri */
-    section.gallery {
-      padding: 60px 20px;
-      background: rgba(255,255,255,0.05);
+    .galeri {
       text-align: center;
+      padding: 50px 20px;
+      background: #162447;
     }
-
-    .gallery h2 {
-      margin-bottom: 20px;
-      font-size: 2rem;
-      color: #ffeb3b;
-    }
-
-    .gallery-controls {
+    .galeri h2 {
+      color: #ffcc00;
       margin-bottom: 20px;
     }
-
-    .gallery-controls input {
-      display: none;
-    }
-
-    .gallery-controls label {
-      background: #00c853;
-      padding: 10px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
+    .galeri button {
+      background: #4caf50;
       color: white;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .gallery-item {
-      position: relative;
-      border-radius: 10px;
-      overflow: hidden;
-      background: #111;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .delete-btn {
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      background: rgba(255,0,0,0.8);
       border: none;
-      border-radius: 5px;
-      color: white;
-      padding: 5px 10px;
+      padding: 10px 15px;
+      border-radius: 6px;
       cursor: pointer;
-      font-size: 14px;
+    }
+    .galeri .grid {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .galeri img {
+      width: 200px;
+      border-radius: 10px;
+      border: 2px solid #4caf50;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1b263b;
+      margin-top: 50px;
+    }
+    .wa-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      font-size: 28px;
+      padding: 15px;
+      border-radius: 50%;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 100;
     }
   </style>
 </head>
 <body>
-  <canvas id="starfield"></canvas>
 
   <header>
-    <div class="logo">
-      <img src="logo.png" alt="Logo BUMDES">
-    </div>
+    <div class="logo"><i class="fas fa-leaf"></i> BUMDES Gunung Mulia</div>
     <nav>
       <a href="#beranda">Beranda</a>
       <a href="#tentang">Tentang</a>
@@ -181,107 +145,38 @@
     </nav>
   </header>
 
-  <section class="hero" id="beranda">
-    <h1>Ketahanan Pangan melalui <span style="color:#ffeb3b;">Peternakan Itik Petelur</span></h1>
+  <section id="beranda" class="hero">
+    <h1>Ketahanan Pangan melalui <span>Peternakan Itik Petelur</span></h1>
     <p>BUMDES Gunung Mulia menghadirkan program unggulan peternakan itik petelur untuk mendukung ketahanan pangan di Desa Giri Mulyo, Kecamatan Marga Sekampung.</p>
-    <a href="#produk" class="btn btn-green">Lihat Produk</a>
-    <a href="#kontak" class="btn btn-yellow">Hubungi Kami</a>
+    <button class="btn btn-green">Lihat Produk</button>
+    <button class="btn btn-yellow">Hubungi Kami</button>
   </section>
 
-  <!-- Galeri -->
-  <section class="gallery" id="galeri">
+  <section id="galeri" class="galeri">
     <h2>Galeri Kegiatan</h2>
-    <div class="gallery-controls">
-      <input type="file" id="upload" accept="image/*">
-      <label for="upload">+ Tambah Foto</label>
-    </div>
-    <div class="gallery-grid" id="galleryGrid"></div>
+    <button onclick="tambahFoto()">+ Tambah Foto</button>
+    <div class="grid" id="galeriGrid"></div>
   </section>
+
+  <footer>
+    <p>&copy; 2025 BUMDES Gunung Mulia</p>
+  </footer>
+
+  <a class="wa-btn" href="https://wa.me/6281234567890" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <script>
-    // Animasi bintang
-    const canvas = document.getElementById('starfield');
-    const ctx = canvas.getContext('2d');
-    let stars = [];
-
-    function resize() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      stars = [];
-      for (let i = 0; i < 150; i++) {
-        stars.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          radius: Math.random() * 1.5,
-          speed: Math.random() * 0.5 + 0.2
-        });
+    function tambahFoto() {
+      const url = prompt("Masukkan URL gambar:");
+      if (url) {
+        const img = document.createElement("img");
+        img.src = url;
+        img.onclick = () => img.remove();
+        document.getElementById("galeriGrid").appendChild(img);
       }
     }
-
-    function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = 'white';
-      stars.forEach(star => {
-        ctx.beginPath();
-        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-        ctx.fill();
-        star.y += star.speed;
-        if (star.y > canvas.height) star.y = 0;
-      });
-      requestAnimationFrame(animate);
-    }
-
-    window.addEventListener('resize', resize);
-    resize();
-    animate();
-
-    // Galeri Upload & Hapus dengan LocalStorage
-    const upload = document.getElementById('upload');
-    const galleryGrid = document.getElementById('galleryGrid');
-
-    function saveGallery() {
-      const images = [];
-      document.querySelectorAll('.gallery-item img').forEach(img => {
-        images.push(img.src);
-      });
-      localStorage.setItem('gallery', JSON.stringify(images));
-    }
-
-    function loadGallery() {
-      const data = JSON.parse(localStorage.getItem('gallery')) || [];
-      data.forEach(src => {
-        addImageToGallery(src);
-      });
-    }
-
-    function addImageToGallery(src) {
-      const div = document.createElement('div');
-      div.classList.add('gallery-item');
-      div.innerHTML = `
-        <img src="${src}" alt="Galeri">
-        <button class="delete-btn">Hapus</button>
-      `;
-      galleryGrid.appendChild(div);
-
-      div.querySelector('.delete-btn').addEventListener('click', () => {
-        galleryGrid.removeChild(div);
-        saveGallery();
-      });
-    }
-
-    upload.addEventListener('change', function() {
-      const file = this.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          addImageToGallery(e.target.result);
-          saveGallery();
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-
-    loadGallery();
   </script>
+
 </body>
 </html>
