@@ -1,530 +1,92 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bumdes Gunung Mulia - Peternakan Itik Petelur</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        :root {
-            --primary: #2D5016;
-            --secondary: #8BC34A;
-            --accent: #FFC107;
-            --light: #F1F8E9;
-            --dark: #1B5E20;
-        }
-        
-        .hero-pattern {
-            background: linear-gradient(135deg, rgba(45, 80, 22, 0.8) 0%, rgba(139, 195, 74, 0.8) 100%);
-        }
-        
-        .floating-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .floating-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            background: var(--dark);
-            transform: translateY(-2px);
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-        }
-        
-        .duck-animation {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--light);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-            transition: all 0.3s ease;
-        }
-        
-        .feature-icon:hover {
-            background: var(--accent);
-            transform: scale(1.1);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUMDES Gunung Mulia</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50">
-    <!-- Header & Navigation -->
-    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center">
-                    <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-3">
-                        <i class="fas fa-egg text-white text-xl"></i>
-                    </div>
-                    <h1 class="text-xl font-bold text-green-800">BUMDES GUNUNG MULIA</h1>
-                </div>
-                
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-green-700 hover:text-green-500 font-medium">Beranda</a>
-                    <a href="#about" class="text-green-700 hover:text-green-500 font-medium">Tentang</a>
-                    <a href="#products" class="text-green-700 hover:text-green-500 font-medium">Produk</a>
-                    <a href="#gallery" class="text-green-700 hover:text-green-500 font-medium">Galeri</a>
-                    <a href="#contact" class="text-green-700 hover:text-green-500 font-medium">Kontak</a>
-                </div>
-                
-                <button class="md:hidden text-green-700">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-        </nav>
-    </header>
+<body class="bg-gray-50 text-gray-800">
 
-    <!-- Hero Section -->
-    <section id="home" class="relative pt-24 pb-20 md:pt-32 md:pb-28 bg-gradient-to-r from-green-50 to-green-100">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-green-800 mb-6">
-                        Ketahanan Pangan melalui<br>
-                        <span class="text-green-600">Peternakan Itik Petelur</span>
-                    </h1>
-                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-                        BUMDES Gunung Mulia menghadirkan program unggulan peternakan itik petelur 
-                        untuk mendukung ketahanan pangan di Desa Giri Mulyo, Kecamatan Marga Sekampung.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#products" class="btn-primary inline-flex items-center">
-                            <i class="fas fa-shopping-basket mr-2"></i>
-                            Lihat Produk
-                        </a>
-                        <a href="#contact" class="border-2 border-green-600 text-green-600 px-6 py-3 rounded-lg hover:bg-green-600 hover:text-white transition">
-                            <i class="fas fa-phone-alt mr-2"></i>
-                            Hubungi Kami
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="md:w-1/2 flex justify-center">
-                    <div class="relative">
-                        <div class="w-80 h-80 bg-white rounded-full shadow-2xl flex items-center justify-center duck-animation">
-                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/947008c6-b18b-49cb-a9a5-2e80cd7ea2a4.png" alt="Illustration of healthy brown laying ducks in a green farm environment with eggs" class="w-64 h-64 object-contain rounded-full" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full bg-green-200 rounded-full flex items-center justify-center\'><i class=\'fas fa-duck text-6xl text-green-600\'></i></div>'">
-                        </div>
-                        <div class="absolute -top-4 -right-4 bg-yellow-400 rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
-                            <i class="fas fa-egg text-white text-2xl"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold text-green-700">BUMDES GUNUNG MULIA</h1>
+      <ul class="flex space-x-6">
+        <li><a href="#beranda" class="hover:text-green-600">Beranda</a></li>
+        <li><a href="#tentang" class="hover:text-green-600">Tentang</a></li>
+        <li><a href="#visi-misi" class="hover:text-green-600">Visi & Misi</a></li>
+        <li><a href="#produk" class="hover:text-green-600">Produk</a></li>
+        <li><a href="#kontak" class="hover:text-green-600">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="beranda" class="pt-32 pb-16 bg-green-100">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <h2 class="text-4xl font-bold text-green-800 mb-4">Ketahanan Pangan melalui <span class="text-green-600">Peternakan Itik Petelur</span></h2>
+        <p class="mb-6">BUMDES Gunung Mulia menghadirkan program unggulan peternakan itik petelur untuk mendukung ketahanan pangan di Desa Giri Mulyo, Kecamatan Marga Sekampung.</p>
+        <div class="flex space-x-4">
+          <a href="#produk" class="bg-green-700 text-white px-4 py-2 rounded-lg shadow hover:bg-green-800">Lihat Produk</a>
+          <a href="https://wa.me/6285952831176" target="_blank" class="border border-green-700 text-green-700 px-4 py-2 rounded-lg shadow hover:bg-green-700 hover:text-white">Hubungi Kami</a>
         </div>
-        
-        <div class="absolute bottom-0 left-0 w-full overflow-hidden">
-            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="w-full h-16">
-                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="fill-green-200"></path>
-                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="fill-green-100"></path>
-                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="fill-white"></path>
-            </svg>
-        </div>
-    </section>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <!-- Ganti foto ini sesuai kebutuhan -->
+        <img src="images/itik.jpg" alt="Peternakan Itik" class="rounded-full shadow-lg w-80 h-80 object-cover">
+      </div>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Tentang Program Kami</h2>
-                <div class="w-20 h-1 bg-green-600 mx-auto mb-6"></div>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Program ketahanan pangan melalui peternakan itik petelur yang berkelanjutan dan ramah lingkungan
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                <div class="text-center p-6 floating-card bg-green-50 rounded-xl">
-                    <div class="feature-icon mb-4">
-                        <i class="fas fa-leaf text-green-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-green-800 mb-2">Organik</h3>
-                    <p class="text-gray-600">Pakan alami dan bebas bahan kimia</p>
-                </div>
-                
-                <div class="text-center p-6 floating-card bg-green-50 rounded-xl">
-                    <div class="feature-icon mb-4">
-                        <i class="fas fa-shield-alt text-green-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-green-800 mb-2">Sehat</h3>
-                    <p class="text-gray-600">Itik yang sehat menghasilkan telur berkualitas</p>
-                </div>
-                
-                <div class="text-center p-6 floating-card bg-green-50 rounded-xl">
-                    <div class="feature-icon mb-4">
-                        <i class="fas fa-users text-green-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-green-800 mb-2">Berkelompok</h3>
-                    <p class="text-gray-600">Melibatkan masyarakat lokal</p>
-                </div>
-                
-                <div class="text-center p-6 floating-card bg-green-50 rounded-xl">
-                    <div class="feature-icon mb-4">
-                        <i class="fas fa-truck text-green-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-green-800 mb-2">Langsung</h3>
-                    <p class="text-gray-600">Dari peternak langsung ke konsumen</p>
-                </div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fe9fd32b-14cf-4599-8d8a-112b108f6f80.png" alt="Modern duck farm with clean facilities and healthy ducks in Giri Mulyo village" class="rounded-2xl shadow-lg w-full" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-64 bg-green-200 rounded-2xl flex items-center justify-center\'><i class=\'fas fa-image text-4xl text-green-600\'></i></div>'">
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold text-green-800 mb-6">Peternakan Itik Petelur BUMDES Gunung Mulia</h3>
-                    <p class="text-gray-700 mb-4 leading-relaxed">
-                        BUMDES Gunung Mulia di Desa Giri Mulyo, Kecamatan Marga Sekampung, Kabupaten Lampung Timur 
-                        telah mengembangkan program peternakan itik petelur sebagai bagian dari upaya ketahanan pangan masyarakat.
-                    </p>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        Dengan sistem pemeliharaan yang modern dan berkelanjutan, kami menghasilkan telur itik berkualitas tinggi 
-                        yang kaya nutrisi dan bebas dari bahan kimia berbahaya.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-600 mr-2"></i>
-                            <span class="text-gray-700">Pakan Organik</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-600 mr-2"></i>
-                            <span class="text-gray-700">Kandang Modern</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-600 mr-2"></i>
-                            <span class="text-gray-700">Perawatan Terbaik</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-600 mr-2"></i>
-                            <span class="text-gray-700">Hygienis</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Tentang -->
+  <section id="tentang" class="py-16">
+    <div class="container mx-auto text-center px-6">
+      <h2 class="text-3xl font-bold mb-6">Tentang Program Kami</h2>
+      <p class="max-w-2xl mx-auto">Program ketahanan pangan melalui peternakan itik petelur yang berkelanjutan dan ramah lingkungan.</p>
+    </div>
+  </section>
 
-    <!-- Products Section -->
-    <section id="products" class="py-20 bg-green-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Produk Unggulan</h2>
-                <div class="w-20 h-1 bg-green-600 mx-auto mb-6"></div>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Telur itik segar dan berkualitas langsung dari peternakan kami
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl shadow-md overflow-hidden floating-card">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f076efd0-b53f-4ef6-9507-ce7d1c025392.png" alt="Fresh brown duck eggs arranged neatly in a traditional basket" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full bg-yellow-100 flex items-center justify-center\'><i class=\'fas fa-egg text-6xl text-yellow-600\'></i></div>'">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-green-800 mb-2">Telur Itik Segar</h3>
-                        <p class="text-gray-600 mb-4">Telur itik organik fresh dari peternakan kami</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-green-700">Rp 25.000</span>
-                            <span class="text-sm text-gray-500">/ kg</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-2xl shadow-md overflow-hidden floating-card">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9a8fdaec-ac58-4ed3-82ff-fa53aa5c942b.png" alt="Premium quality duck eggs with golden yolks in ceramic bowl" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full bg-yellow-100 flex items-center justify-center\'><i class=\'fas fa-star text-6xl text-yellow-600\'></i></div>'">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-green-800 mb-2">Telur Itik Premium</h3>
-                        <p class="text-gray-600 mb-4">Telur dengan kualitas terbaik dan yolk yang golden</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-green-700">Rp 35.000</span>
-                            <span class="text-sm text-gray-500">/ kg</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-2xl shadow-md overflow-hidden floating-card">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9c4f38bf-efcc-4fba-a407-28bfabcc7c53.png" alt="Packaged duck eggs ready for distribution with Bumdes Gunung Mulia branding" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full bg-green-100 flex items-center justify-center\'><i class=\'fas fa-gift text-6xl text-green-600\'></i></div>'">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-green-800 mb-2">Paket Hemat</h3>
-                        <p class="text-gray-600 mb-4">Paket khusus untuk kebutuhan keluarga dan bisnis</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-green-700">Rp 120.000</span>
-                            <span class="text-sm text-gray-500">/ 5 kg</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <a href="#contact" class="btn-primary inline-flex items-center mx-auto">
-                    <i class="fas fa-shopping-cart mr-2"></i>
-                    Pesan Sekarang
-                </a>
-            </div>
-        </div>
-    </section>
+  <!-- Visi Misi -->
+  <section id="visi-misi" class="py-16 bg-gray-100">
+    <div class="container mx-auto text-center px-6">
+      <h2 class="text-3xl font-bold mb-6">Visi & Misi</h2>
+      
+      <h3 class="text-xl font-semibold mb-2">Visi</h3>
+      <p class="mb-6">Menjadi BUMDES yang mandiri, inovatif, dan berkelanjutan dalam meningkatkan kesejahteraan masyarakat Desa Giri Mulyo.</p>
+      
+      <h3 class="text-xl font-semibold mb-2">Misi</h3>
+      <ul class="list-disc list-inside text-left max-w-2xl mx-auto space-y-2">
+        <li>Mengembangkan potensi lokal desa secara produktif.</li>
+        <li>Meningkatkan kemandirian ekonomi masyarakat.</li>
+        <li>Menciptakan usaha yang berkelanjutan dan ramah lingkungan.</li>
+      </ul>
+    </div>
+  </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Galeri Kegiatan</h2>
-                <div class="w-20 h-1 bg-green-600 mx-auto mb-6"></div>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Dokumentasi kegiatan peternakan dan kehidupan itik-itik kami
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <div class="overflow-hidden rounded-lg">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1d685477-81ea-46ca-b50c-8574c55585c7.png" alt="Ducks swimming in clean water pond at Bumdes Gunung Mulia farm" class="w-full h-48 object-cover hover:scale-110 transition duration-300" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-48 bg-blue-100 flex items-center justify-center rounded-lg\'><i class=\'fas fa-water text-4xl text-blue-600\'></i></div>'">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c6b70178-b731-4f38-9e7d-3ec989b3ed0d.png" alt="Farmer feeding healthy ducks with organic feed in modern cages" class="w-full h-48 object-cover hover:scale-110 transition duration-300" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-48 bg-green-100 flex items-center justify-center rounded-lg\'><i class=\'fas fa-utensils text-4xl text-green-600\'></i></div>'">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ce971861-eb10-4c3a-adcf-e51d6f49b03c.png" alt="Egg collection process showing fresh eggs being gathered by farmers" class="w-full h-48 object-cover hover:scale-110 transition duration-300" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-48 bg-yellow-100 flex items-center justify-center rounded-lg\'><i class=\'fas fa-egg text-4xl text-yellow-600\'></i></div>'">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/966c4ce1-40ce-41b2-b685-fb5f91ceaaf8.png" alt="Community training session on duck farming techniques at Bumdes" class="w-full h-48 object-cover hover:scale-110 transition duration-300" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-48 bg-orange-100 flex items-center justify-center rounded-lg\'><i class=\'fas fa-chalkboard-teacher text-4xl text-orange-600\'></i></div>'">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c4cd4fcf-e6a3-40bf-9e72-cd8024c95f35.png" alt="Healthy ducklings in warm brooding area with proper temperature control" class="w-full h-48 object-cover hover:scale-110 transition duration-300" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-48 bg-red-100 flex items-center justify-center rounded-lg\'><i class=\'fas fa-baby text-4xl text-red-600\'></i></div>'">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2b9a9b68-4c58-4e53-850e-5eca793d66c3.png" alt="Packaging area showing eggs being sorted and prepared for market" class="w-full h-48 object-cover hover:scale-110 transition duration-300" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-48 bg-purple-100 flex items-center justify-center rounded-lg\'><i class=\'fas fa-box-open text-4xl text-purple-600\'></i></div>'">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b7532a64-eb19-4261-8da6-44093c196689.png" alt="Local market stall selling Bumdes Gunung Mulia duck eggs to customers" class="w-full h-48 object-cover hover:scale-110 transition duration-300" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-48 bg-teal-100 flex items-center justify-center rounded-lg\'><i class=\'fas fa-store text-4xl text-teal-600\'></i></div>'">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/91912566-2346-41e3-bd52-78fdd08760d5.png" alt="Beautiful landscape of Giri Mulyo village with duck farms in the background" class="w-full h-48 object-cover hover:scale-110 transition duration-300" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-48 bg-gray-100 flex items-center justify-center rounded-lg\'><i class=\'fas fa-mountain text-4xl text-gray-600\'></i></div>'">
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Produk -->
+  <section id="produk" class="py-16">
+    <div class="container mx-auto text-center px-6">
+      <h2 class="text-3xl font-bold mb-6">Produk Kami</h2>
+      <p>Hasil unggulan peternakan itik petelur Desa Giri Mulyo.</p>
+      <!-- Tambahkan kartu produk di sini -->
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-green-800 text-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Hubungi Kami</h2>
-                <div class="w-20 h-1 bg-green-400 mx-auto mb-6"></div>
-                <p class="text-lg text-green-100 max-w-3xl mx-auto">
-                    Mari bekerja sama untuk mendukung ketahanan pangan masyarakat
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-2xl font-bold mb-6">Informasi Kontak</h3>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="bg-green-700 p-3 rounded-full mr-4">
-                                <i class="fas fa-map-marker-alt text-white"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-1">Alamat</h4>
-                                <p class="text-green-100">Desa Giri Mulyo, Kecamatan Marga Sekampung<br>Kabupaten Lampung Timur, Lampung</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-green-700 p-3 rounded-full mr-4">
-                                <i class="fas fa-phone-alt text-white"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-1">Telepon</h4>
-                                <p class="text-green-100">+62 812-3456-7890</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-green-700 p-3 rounded-full mr-4">
-                                <i class="fas fa-envelope text-white"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-1">Email</h4>
-                                <p class="text-green-100">bumdes.gunungmulia@gmail.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-green-700 p-3 rounded-full mr-4">
-                                <i class="fas fa-clock text-white"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-1">Jam Operasional</h4>
-                                <p class="text-green-100">Senin - Sabtu: 08:00 - 17:00 WIB</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-8">
-                        <h4 class="font-semibold mb-4">Follow Kami</h4>
-                        <div class="flex space-x-4">
-                            <a href="#" class="bg-green-700 p-3 rounded-full hover:bg-green-600 transition">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="bg-green-700 p-3 rounded-full hover:bg-green-600 transition">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="bg-green-700 p-3 rounded-full hover:bg-green-600 transition">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-2xl font-bold mb-6">Kirim Pesan</h3>
-                    <form class="space-y-4">
-                        <div>
-                            <label class="block text-green-100 mb-2">Nama Lengkap</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-lg bg-green-700 border border-green-600 text-white placeholder-green-300 focus:outline-none focus:ring-2 focus:ring-green-400">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-green-100 mb-2">Email</label>
-                            <input type="email" class="w-full px-4 py-3 rounded-lg bg-green-700 border border-green-600 text-white placeholder-green-300 focus:outline-none focus:ring-2 focus:ring-green-400">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-green-100 mb-2">Pesan</label>
-                            <textarea rows="5" class="w-full px-4 py-3 rounded-lg bg-green-700 border border-green-600 text-white placeholder-green-300 focus:outline-none focus:ring-2 focus:ring-green-400"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-green-600 hover:bg-green-500 text-white font-semibold py-3 px-6 rounded-lg transition">
-                            Kirim Pesan
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Kontak -->
+  <section id="kontak" class="py-16 bg-green-50">
+    <div class="container mx-auto text-center px-6">
+      <h2 class="text-3xl font-bold mb-6">Kontak Kami</h2>
+      <p class="mb-4">Hubungi kami untuk informasi lebih lanjut</p>
+      <a href="https://wa.me/6285952831176" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-lg shadow hover:bg-green-700">Chat via WhatsApp</a>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-green-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div>
-                    <h4 class="text-xl font-bold mb-4">BUMDES GUNUNG MULIA</h4>
-                    <p class="text-green-200 mb-4">
-                        Mengembangkan ketahanan pangan melalui peternakan itik petelur yang berkelanjutan dan ramah lingkungan.
-                    </p>
-                    <p class="text-green-300 text-sm">
-                        © 2024 BUMDES Gunung Mulia. All rights reserved.
-                    </p>
-                </div>
-                
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Tautan Cepat</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-green-200 hover:text-white transition">Beranda</a></li>
-                        <li><a href="#about" class="text-green-200 hover:text-white transition">Tentang Kami</a></li>
-                        <li><a href="#products" class="text-green-200 hover:text-white transition">Produk</a></li>
-                        <li><a href="#gallery" class="text-green-200 hover:text-white transition">Galeri</a></li>
-                        <li><a href="#contact" class="text-green-200 hover:text-white transition">Kontak</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Lokasi Kami</h4>
-                    <div class="bg-green-800 p-4 rounded-lg">
-                        <p class="text-green-200 mb-2">
-                            <i class="fas fa-map-marker-alt mr-2"></i>
-                            Desa Giri Mulyo, Kec. Marga Sekampung
-                        </p>
-                        <p class="text-green-200">
-                            Kabupaten Lampung Timur, Provinsi Lampung
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white text-center py-4">
+    <p>&copy; 2025 BUMDES Gunung Mulia. Semua Hak Dilindungi.</p>
+  </footer>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="fixed bottom-6 right-6 bg-green-600 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <script>
-        // Back to top button
-        const backToTopButton = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.classList.add('opacity-100');
-            } else {
-                backToTopButton.classList.remove('opacity-100');
-            }
-        });
-        
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-        
-        // Mobile menu toggle (simplified for demo)
-        document.querySelector('button.md\\:hidden').addEventListener('click', () => {
-            alert('Menu mobile akan ditampilkan di sini');
-        });
-    </script>
 </body>
 </html>
-
