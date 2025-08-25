@@ -1,1 +1,13 @@
+bumdes-gnmulia/
+│
+├── index.html
+├── README.md
+├── assets/
+│   ├── logo-bumdes.png
+│   ├── direktur.jpg
+│   ├── sekretaris.jpg
+│   ├── bendahara.jpg
+│   ├── kegiatan1.jpg
+│   ├── kegiatan2.jpg
+│   └── ...
 
