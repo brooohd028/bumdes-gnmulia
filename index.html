@@ -4,159 +4,124 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BUMDES Gunung Mulia</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b1d36;
-      color: white;
-      scroll-behavior: smooth;
-    }
-    header {
-      background: #0f2747;
-      padding: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-    header a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    header a:hover {
-      color: #00ff88;
-    }
-    section {
-      padding: 100px 20px;
-      min-height: 100vh;
-    }
-    h1, h2 {
-      text-align: center;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 10px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .btn-green { background: #28a745; color: white; }
-    .btn-yellow { background: #ffc107; color: black; border: 2px solid #ffc107; }
-    footer {
-      background: #0f2747;
-      text-align: center;
-      padding: 15px;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
   <!-- Navbar -->
-  <header>
-    <div><b>🌱 BUMDES Gunung Mulia</b></div>
-    <nav>
-      <a href="#beranda">Beranda</a>
-      <a href="#tentang">Tentang</a>
-      <a href="#visi">Visi & Misi</a>
-      <a href="#produk">Produk</a>
-      <a href="#galeri">Galeri</a>
-      <a href="#kontak">Kontak</a>
-    </nav>
-  </header>
+  <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <div class="flex items-center space-x-3">
+        <img src="Gambar WhatsApp 2025-08-03 pukul 19.21.43_964c08ed.jpg" alt="Logo BUMDES" class="h-12 w-12 rounded-full shadow">
+        <span class="text-xl font-bold text-green-700">BUMDES Gunung Mulia</span>
+      </div>
+      <ul class="flex space-x-6 font-medium">
+        <li><a href="#beranda" class="hover:text-green-600">Beranda</a></li>
+        <li><a href="#tentang" class="hover:text-green-600">Tentang</a></li>
+        <li><a href="#visi" class="hover:text-green-600">Visi & Misi</a></li>
+        <li><a href="#produk" class="hover:text-green-600">Produk</a></li>
+        <li><a href="#kontak" class="hover:text-green-600">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <!-- Beranda -->
-<section id="beranda">
-  <h1>Ketahanan Pangan melalui <span style="color:yellow">Peternakan Itik Petelur</span></h1>
-  <p style="text-align:center;max-width:700px;margin:auto;">
-    BUMDES Gunung Mulia menghadirkan program unggulan peternakan itik petelur 
-    untuk mendukung ketahanan pangan di Desa Giri Mulyo, Kecamatan Marga Sekampung.
-  </p>
-  
-  <!-- Gambar Itik -->
-  <div style="text-align:center; margin:30px 0;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Domesticated_duck%2C_female.jpg" 
-         alt="Itik Petelur" 
-         style="max-width:400px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.5);">
-  </div>
-  
-  <!-- Tombol -->
-  <div style="text-align:center;">
-    <a href="#produk" class="btn btn-green">Lihat Produk</a>
-    <a href="#kontak" class="btn btn-yellow">Hubungi Kami</a>
-  </div>
-</section>
-
-
-  <!-- Tentang -->
-  <section id="tentang">
-    <h2>Tentang Kami</h2>
-    <p style="text-align:center;max-width:700px;margin:auto;">
-      BUMDES Gunung Mulia berdiri sebagai wadah pemberdayaan masyarakat Desa Giri Mulyo.
-      Fokus utama kami adalah pengembangan sektor pertanian dan peternakan, khususnya itik petelur,
-      untuk mendukung ketahanan pangan serta meningkatkan ekonomi desa.
-    </p>
-  </section>
-
-  <!-- Visi & Misi -->
-  <section id="visi">
-    <h2>Visi & Misi</h2>
-    <h3 style="text-align:center;">Visi</h3>
-    <p style="text-align:center;">
-      "Menjadi BUMDES unggulan yang mandiri dan berkelanjutan melalui pengembangan usaha berbasis potensi desa."
-    </p>
-    <h3 style="text-align:center;">Misi</h3>
-    <ul style="max-width:600px;margin:auto;line-height:1.8;">
-      <li>Meningkatkan kesejahteraan masyarakat desa melalui usaha produktif.</li>
-      <li>Mendukung program ketahanan pangan dengan peternakan itik petelur.</li>
-      <li>Mengembangkan inovasi usaha berbasis potensi lokal.</li>
-      <li>Meningkatkan keterampilan masyarakat melalui pelatihan dan pendampingan.</li>
-    </ul>
-  </section>
-
-  <!-- Produk -->
-  <section id="produk">
-    <h2>Produk Kami</h2>
-    <div style="text-align:center;">
-      <p>🥚 Telur Itik Segar – dihasilkan langsung dari peternakan warga.</p>
-      <p>🧺 Paket Telur (isi 10 / 30 butir) – cocok untuk konsumsi rumah tangga maupun usaha kuliner.</p>
-      <p>🌱 Pupuk Organik – hasil samping peternakan yang bermanfaat untuk pertanian.</p>
+  <!-- Hero Section -->
+  <section id="beranda" class="pt-32 pb-20 bg-gradient-to-r from-green-100 to-green-50">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-green-800 leading-tight mb-4">
+          Ketahanan Pangan <br> melalui <span class="text-green-600">Peternakan Itik Petelur</span>
+        </h1>
+        <p class="text-lg text-gray-700 mb-6">
+          BUMDES Gunung Mulia menghadirkan program unggulan peternakan itik petelur untuk mendukung ketahanan pangan di Desa Giri Mulyo, Kecamatan Marga Sekampung.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#produk" class="px-6 py-3 bg-green-700 text-white font-semibold rounded-lg shadow hover:bg-green-800 transition">Lihat Produk</a>
+          <a href="https://wa.me/6285952831176" target="_blank" class="px-6 py-3 border border-green-600 text-green-700 font-semibold rounded-lg hover:bg-green-600 hover:text-white transition">Hubungi Kami</a>
+        </div>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <img src="Gambar WhatsApp 2025-08-03 pukul 19.21.43_964c08ed.jpg" alt="Logo BUMDES" class="w-72 h-72 rounded-full shadow-lg border-4 border-green-200 animate-pulse">
+      </div>
     </div>
   </section>
 
-  <!-- Galeri -->
-  <section id="galeri">
-    <h2>Galeri Kegiatan</h2>
-    <p style="text-align:center;">Dokumentasi kegiatan BUMDES Gunung Mulia</p>
-    <div style="text-align:center;">
-      <img src="https://via.placeholder.com/200" alt="Foto 1">
-      <img src="https://via.placeholder.com/200" alt="Foto 2">
-      <img src="https://via.placeholder.com/200" alt="Foto 3">
+  <!-- Tentang -->
+  <section id="tentang" class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-green-800 mb-6">Tentang Program Kami</h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Program ketahanan pangan melalui peternakan itik petelur yang berkelanjutan, ramah lingkungan, 
+        serta mendukung ekonomi masyarakat Desa Giri Mulyo.
+      </p>
+    </div>
+  </section>
+
+  <!-- Visi & Misi -->
+  <section id="visi" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-green-800 mb-6">Visi & Misi</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="p-6 bg-white shadow rounded-lg hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold text-green-700 mb-4">Visi</h3>
+          <p class="text-gray-600">Menjadi BUMDES yang mandiri, inovatif, dan berkelanjutan dalam meningkatkan kesejahteraan masyarakat Desa Giri Mulyo.</p>
+        </div>
+        <div class="p-6 bg-white shadow rounded-lg hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold text-green-700 mb-4">Misi</h3>
+          <ul class="text-gray-600 text-left list-disc list-inside">
+            <li>Mengembangkan usaha peternakan itik petelur yang modern dan berdaya saing.</li>
+            <li>Meningkatkan kemandirian ekonomi masyarakat desa.</li>
+            <li>Menjaga kelestarian lingkungan melalui praktik berkelanjutan.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produk -->
+  <section id="produk" class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-green-800 mb-10">Produk Unggulan</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-gray-50 shadow rounded-lg hover:shadow-xl transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/3170/3170733.png" alt="Telur Itik" class="w-20 mx-auto mb-4">
+          <h3 class="text-xl font-semibold text-green-700 mb-2">Telur Itik Segar</h3>
+          <p class="text-gray-600">Telur itik berkualitas tinggi, segar, dan sehat untuk konsumsi harian.</p>
+        </div>
+        <div class="p-6 bg-gray-50 shadow rounded-lg hover:shadow-xl transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/1998/1998592.png" alt="Itik Petelur" class="w-20 mx-auto mb-4">
+          <h3 class="text-xl font-semibold text-green-700 mb-2">Bibit Itik</h3>
+          <p class="text-gray-600">Bibit itik pilihan dengan kualitas unggul untuk peternakan baru.</p>
+        </div>
+        <div class="p-6 bg-gray-50 shadow rounded-lg hover:shadow-xl transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Pakan" class="w-20 mx-auto mb-4">
+          <h3 class="text-xl font-semibold text-green-700 mb-2">Pakan Itik</h3>
+          <p class="text-gray-600">Pakan itik bernutrisi tinggi untuk mendukung produktivitas peternakan.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Kontak -->
-  <section id="kontak">
-    <h2>Kontak Kami</h2>
-    <p style="text-align:center;">
-      📍 Desa Giri Mulyo, Kecamatan Marga Sekampung <br>
-      📞 0859-5283-1176<br>
-      ✉️ emailbumdesgunungmulia.com
-    </p>
+  <section id="kontak" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-green-800 mb-6">Kontak Kami</h2>
+      <p class="text-lg text-gray-600 mb-4">Hubungi kami untuk informasi lebih lanjut.</p>
+      <a href="https://wa.me/6285952831176" target="_blank" class="px-6 py-3 bg-green-700 text-white font-semibold rounded-lg shadow hover:bg-green-800 transition">Chat via WhatsApp</a>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    © 2025 BUMDES Gunung Mulia
+  <footer class="bg-green-700 text-white py-6 text-center">
+    <p>&copy; 2025 BUMDES Gunung Mulia. Semua Hak Dilindungi.</p>
   </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/6285952831176" target="_blank" 
+     class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition animate-bounce">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+         alt="WhatsApp" class="w-8 h-8">
+  </a>
 
 </body>
 </html>
-
-
