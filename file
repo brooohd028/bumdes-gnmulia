@@ -1,0 +1,96 @@
+<!-- Navbar -->
+<header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <img src="assets/logo-bumdes.png" alt="Logo BUMDES" class="h-12 w-12 rounded-full">
+        <span class="text-xl font-bold text-green-700">BUMDES Gunung Mulia</span>
+      </div>
+
+      <!-- Menu -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="#beranda" class="text-gray-700 hover:text-green-700 font-medium">Beranda</a>
+        <a href="#tentang" class="text-gray-700 hover:text-green-700 font-medium">Tentang</a>
+        <a href="#visi-misi" class="text-gray-700 hover:text-green-700 font-medium">Visi & Misi</a>
+        <a href="#produk" class="text-gray-700 hover:text-green-700 font-medium">Produk</a>
+        <a href="#kontak" class="text-gray-700 hover:text-green-700 font-medium">Kontak</a>
+      </nav>
+
+      <!-- Tombol Mobile -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+          ☰
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+    <a href="#beranda" class="block px-4 py-2 text-gray-700 hover:bg-green-100">Beranda</a>
+    <a href="#tentang" class="block px-4 py-2 text-gray-700 hover:bg-green-100">Tentang</a>
+    <a href="#visi-misi" class="block px-4 py-2 text-gray-700 hover:bg-green-100">Visi & Misi</a>
+    <a href="#produk" class="block px-4 py-2 text-gray-700 hover:bg-green-100">Produk</a>
+    <a href="#kontak" class="block px-4 py-2 text-gray-700 hover:bg-green-100">Kontak</a>
+  </div>
+</header>
+
+<!-- Script JS untuk toggle mobile menu -->
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+<!-- Navbar -->
+<header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <img src="assets/logo-bumdes.png" alt="Logo BUMDES" class="h-12 w-12 rounded-full">
+        <span class="text-xl font-bold text-green-700">BUMDES Gunung Mulia</span>
+      </div>
+
+      <!-- Menu -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="#beranda" class="text-gray-700 hover:text-green-700 font-medium">Beranda</a>
+        <a href="#tentang" class="text-gray-700 hover:text-green-700 font-medium">Tentang</a>
+        <a href="#visi-misi" class="text-gray-700 hover:text-green-700 font-medium">Visi & Misi</a>
+        <a href="#produk" class="text-gray-700 hover:text-green-700 font-medium">Produk</a>
+        <a href="#kontak" class="text-gray-700 hover:text-green-700 font-medium">Kontak</a>
+      </nav>
+
+      <!-- Tombol Mobile -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+          ☰
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+    <a href="#beranda" class="block px-4 py-2 text-gray-700 hover:bg-green-100">Beranda</a>
+    <a href="#tentang" class="block px-4 py-2 text-gray-700 hover:bg-green-100">Tentang</a>
+    <a href="#visi-misi" class="block px-4 py-2 text-gray-700 hover:bg-green-100">Visi & Misi</a>
+    <a href="#produk" class="block px-4 py-2 text-gray-700 hover:bg-green-100">Produk</a>
+    <a href="#kontak" class="block px-4 py-2 text-gray-700 hover:bg-green-100">Kontak</a>
+  </div>
+</header>
+
+<!-- Script JS untuk toggle mobile menu -->
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
