@@ -1,4 +1,79 @@
 <!DOCTYPE html>
+<!-- Tambahkan di <head> untuk Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<!-- ========================= -->
+<!-- Galeri Kegiatan BUMDes -->
+<!-- ========================= -->
+<section id="galeri" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <h2 class="text-3xl font-bold text-center text-green-700 mb-10">
+    Galeri Kegiatan BUMDes
+  </h2>
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <!-- Foto 1 -->
+      <div class="swiper-slide">
+        <img src="assets/kegiatan1.jpg" alt="Kegiatan 1" class="w-full h-96 object-cover rounded-2xl shadow-lg" />
+      </div>
+      <!-- Foto 2 -->
+      <div class="swiper-slide">
+        <img src="assets/kegiatan2.jpg" alt="Kegiatan 2" class="w-full h-96 object-cover rounded-2xl shadow-lg" />
+      </div>
+      <!-- Foto 3 -->
+      <div class="swiper-slide">
+        <img src="assets/kegiatan3.jpg" alt="Kegiatan 3" class="w-full h-96 object-cover rounded-2xl shadow-lg" />
+      </div>
+      <!-- Foto 4 -->
+      <div class="swiper-slide">
+        <img src="assets/kegiatan4.jpg" alt="Kegiatan 4" class="w-full h-96 object-cover rounded-2xl shadow-lg" />
+      </div>
+    </div>
+
+    <!-- Tombol navigasi -->
+    <div class="swiper-button-next text-green-700"></div>
+    <div class="swiper-button-prev text-green-700"></div>
+
+    <!-- Bulatan indikator -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- Tambahkan di akhir sebelum </body> -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000, // otomatis geser tiap 3 detik
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2, // tablet bisa lihat 2
+      },
+      1024: {
+        slidesPerView: 3, // laptop/pc bisa lihat 3
+      },
+    },
+  });
+</script>
+
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -527,4 +602,5 @@
     </script>
 </body>
 </html>
+
 
