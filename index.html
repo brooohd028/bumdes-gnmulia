@@ -1,3 +1,9 @@
+<!-- Tambahkan di <head> untuk Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
 <!-- ========================= -->
 <!-- Galeri Kegiatan BUMDes -->
 <!-- ========================= -->
@@ -6,28 +12,24 @@
     Galeri Kegiatan BUMDes
   </h2>
 
-  <!-- Swiper Container -->
+  <!-- Swiper -->
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <!-- Foto 1 -->
       <div class="swiper-slide">
-        <img src="assets/kegiatan1.jpg" alt="Kegiatan 1"
-          class="w-full h-96 object-cover rounded-2xl shadow-lg" />
+        <img src="assets/kegiatan1.jpg" alt="Kegiatan 1" class="w-full h-96 object-cover rounded-2xl shadow-lg" />
       </div>
       <!-- Foto 2 -->
       <div class="swiper-slide">
-        <img src="assets/kegiatan2.jpg" alt="Kegiatan 2"
-          class="w-full h-96 object-cover rounded-2xl shadow-lg" />
+        <img src="assets/kegiatan2.jpg" alt="Kegiatan 2" class="w-full h-96 object-cover rounded-2xl shadow-lg" />
       </div>
       <!-- Foto 3 -->
       <div class="swiper-slide">
-        <img src="assets/kegiatan3.jpg" alt="Kegiatan 3"
-          class="w-full h-96 object-cover rounded-2xl shadow-lg" />
+        <img src="assets/kegiatan3.jpg" alt="Kegiatan 3" class="w-full h-96 object-cover rounded-2xl shadow-lg" />
       </div>
       <!-- Foto 4 -->
       <div class="swiper-slide">
-        <img src="assets/kegiatan4.jpg" alt="Kegiatan 4"
-          class="w-full h-96 object-cover rounded-2xl shadow-lg" />
+        <img src="assets/kegiatan4.jpg" alt="Kegiatan 4" class="w-full h-96 object-cover rounded-2xl shadow-lg" />
       </div>
     </div>
 
@@ -40,15 +42,7 @@
   </div>
 </section>
 
-<!-- ========================= -->
-<!-- Tambahan Script & CSS Swiper -->
-<!-- ========================= -->
-
-<!-- Tambahkan ini di <head> -->
-<link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-<!-- Tambahkan ini sebelum </body> -->
+<!-- Tambahkan di akhir sebelum </body> -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
   var swiper = new Swiper(".mySwiper", {
@@ -70,10 +64,10 @@
     },
     breakpoints: {
       768: {
-        slidesPerView: 2, // tablet bisa lihat 2 foto
+        slidesPerView: 2, // tablet bisa lihat 2
       },
       1024: {
-        slidesPerView: 3, // laptop/pc bisa lihat 3 foto
+        slidesPerView: 3, // laptop/pc bisa lihat 3
       },
     },
   });
