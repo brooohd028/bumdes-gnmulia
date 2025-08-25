@@ -3,144 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BUMDES GUNUNG MULIA</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>BUMDES Gunung Mulia</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0d1b2a;
+      background: #0b1d36;
       color: white;
+      scroll-behavior: smooth;
     }
     header {
-      background: #1b263b;
-      padding: 15px 30px;
+      background: #0f2747;
+      padding: 15px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: sticky;
+      position: fixed;
+      width: 100%;
       top: 0;
-      z-index: 10;
+      z-index: 1000;
     }
-    header .logo {
-      font-size: 20px;
-      font-weight: bold;
-      color: #4caf50;
-      display: flex;
-      align-items: center;
-    }
-    nav a {
+    header a {
       color: white;
-      text-decoration: none;
       margin: 0 10px;
+      text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
-      color: #4caf50;
+    header a:hover {
+      color: #00ff88;
     }
-    .hero {
-      text-align: center;
+    section {
       padding: 100px 20px;
-      background: linear-gradient(to bottom, #0d1b2a, #1b263b);
-      position: relative;
-      z-index: 1;
+      min-height: 100vh;
     }
-    .hero h1 {
-      font-size: 36px;
-      color: #00ffb3;
-    }
-    .hero span {
-      color: #ffcc00;
-    }
-    .hero p {
-      margin: 15px 0;
-      font-size: 16px;
-      color: #ddd;
+    h1, h2 {
+      text-align: center;
     }
     .btn {
+      display: inline-block;
       padding: 10px 20px;
-      margin: 5px;
-      border: none;
-      cursor: pointer;
+      margin: 10px;
+      border-radius: 5px;
+      text-decoration: none;
       font-weight: bold;
-      border-radius: 8px;
-      transition: 0.3s;
     }
-    .btn-green {
-      background: #4caf50;
-      color: white;
-    }
-    .btn-green:hover {
-      background: #45a049;
-    }
-    .btn-yellow {
-      background: transparent;
-      border: 2px solid #ffcc00;
-      color: #ffcc00;
-    }
-    .btn-yellow:hover {
-      background: #ffcc00;
-      color: #000;
-    }
-    .galeri {
-      text-align: center;
-      padding: 50px 20px;
-      background: #162447;
-      position: relative;
-      z-index: 1;
-    }
-    .galeri h2 {
-      color: #ffcc00;
-      margin-bottom: 20px;
-    }
-    .galeri button {
-      background: #4caf50;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .galeri .grid {
-      margin-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-    .galeri img {
-      width: 200px;
-      border-radius: 10px;
-      border: 2px solid #4caf50;
-    }
+    .btn-green { background: #28a745; color: white; }
+    .btn-yellow { background: #ffc107; color: black; border: 2px solid #ffc107; }
     footer {
+      background: #0f2747;
       text-align: center;
-      padding: 20px;
-      background: #1b263b;
-      margin-top: 50px;
-      position: relative;
-      z-index: 1;
-    }
-    .wa-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      font-size: 28px;
       padding: 15px;
-      border-radius: 50%;
-      text-align: center;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      z-index: 1000;
     }
   </style>
 </head>
 <body>
 
+  <!-- Navbar -->
   <header>
-    <div class="logo"><i class="fas fa-leaf"></i> BUMDES Gunung Mulia</div>
+    <div><b>🌱 BUMDES Gunung Mulia</b></div>
     <nav>
       <a href="#beranda">Beranda</a>
       <a href="#tentang">Tentang</a>
@@ -150,45 +70,81 @@
       <a href="#kontak">Kontak</a>
     </nav>
   </header>
-  
-  <section id="beranda" class="hero">
-  <h1>Ketahanan Pangan melalui <span>Peternakan Itik Petelur</span></h1>
-  <p>BUMDES Gunung Mulia menghadirkan program unggulan peternakan itik petelur untuk mendukung ketahanan pangan di Desa Giri Mulyo, Kecamatan Marga Sekampung.</p>
 
-  <!-- Ubah dari alert ke anchor -->
-  <a href="#produk" class="btn btn-green">Lihat Produk</a>
-  <a href="#kontak" class="btn btn-yellow">Hubungi Kami</a>
-</section>
-
-  
-  
-  <section id="galeri" class="galeri">
-    <h2>Galeri Kegiatan</h2>
-    <button onclick="tambahFoto()">+ Tambah Foto</button>
-    <div class="grid" id="galeriGrid"></div>
+  <!-- Beranda -->
+  <section id="beranda">
+    <h1>Ketahanan Pangan melalui <span style="color:yellow">Peternakan Itik Petelur</span></h1>
+    <p style="text-align:center;max-width:700px;margin:auto;">
+      BUMDES Gunung Mulia menghadirkan program unggulan peternakan itik petelur 
+      untuk mendukung ketahanan pangan di Desa Giri Mulyo, Kecamatan Marga Sekampung.
+    </p>
+    <div style="text-align:center;">
+      <a href="#produk" class="btn btn-green">Lihat Produk</a>
+      <a href="#kontak" class="btn btn-yellow">Hubungi Kami</a>
+    </div>
   </section>
 
+  <!-- Tentang -->
+  <section id="tentang">
+    <h2>Tentang Kami</h2>
+    <p style="text-align:center;max-width:700px;margin:auto;">
+      BUMDES Gunung Mulia berdiri sebagai wadah pemberdayaan masyarakat Desa Giri Mulyo.
+      Fokus utama kami adalah pengembangan sektor pertanian dan peternakan, khususnya itik petelur,
+      untuk mendukung ketahanan pangan serta meningkatkan ekonomi desa.
+    </p>
+  </section>
+
+  <!-- Visi & Misi -->
+  <section id="visi">
+    <h2>Visi & Misi</h2>
+    <h3 style="text-align:center;">Visi</h3>
+    <p style="text-align:center;">
+      "Menjadi BUMDES unggulan yang mandiri dan berkelanjutan melalui pengembangan usaha berbasis potensi desa."
+    </p>
+    <h3 style="text-align:center;">Misi</h3>
+    <ul style="max-width:600px;margin:auto;line-height:1.8;">
+      <li>Meningkatkan kesejahteraan masyarakat desa melalui usaha produktif.</li>
+      <li>Mendukung program ketahanan pangan dengan peternakan itik petelur.</li>
+      <li>Mengembangkan inovasi usaha berbasis potensi lokal.</li>
+      <li>Meningkatkan keterampilan masyarakat melalui pelatihan dan pendampingan.</li>
+    </ul>
+  </section>
+
+  <!-- Produk -->
+  <section id="produk">
+    <h2>Produk Kami</h2>
+    <div style="text-align:center;">
+      <p>🥚 Telur Itik Segar – dihasilkan langsung dari peternakan warga.</p>
+      <p>🧺 Paket Telur (isi 10 / 30 butir) – cocok untuk konsumsi rumah tangga maupun usaha kuliner.</p>
+      <p>🌱 Pupuk Organik – hasil samping peternakan yang bermanfaat untuk pertanian.</p>
+    </div>
+  </section>
+
+  <!-- Galeri -->
+  <section id="galeri">
+    <h2>Galeri Kegiatan</h2>
+    <p style="text-align:center;">Dokumentasi kegiatan BUMDES Gunung Mulia</p>
+    <div style="text-align:center;">
+      <img src="https://via.placeholder.com/200" alt="Foto 1">
+      <img src="https://via.placeholder.com/200" alt="Foto 2">
+      <img src="https://via.placeholder.com/200" alt="Foto 3">
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak">
+    <h2>Kontak Kami</h2>
+    <p style="text-align:center;">
+      📍 Desa Giri Mulyo, Kecamatan Marga Sekampung <br>
+      📞 0812-3456-7890 <br>
+      ✉️ email@bumdes.com
+    </p>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 BUMDES Gunung Mulia</p>
+    © 2025 BUMDES Gunung Mulia
   </footer>
-
-  <a class="wa-btn" href="https://wa.me/6281234567890" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <script>
-    function tambahFoto() {
-      const url = prompt("Masukkan URL gambar:");
-      if (url) {
-        const img = document.createElement("img");
-        img.src = url;
-        img.onclick = () => img.remove();
-        document.getElementById("galeriGrid").appendChild(img);
-      }
-    }
-  </script>
 
 </body>
 </html>
-
-
